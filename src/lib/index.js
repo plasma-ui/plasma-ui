@@ -18,6 +18,8 @@ import Navbar from "./Navbar";
 import Overlay from "./Overlay";
 import Spacer from "./Spacer";
 import theme from "./theme";
+import useClickOutside from "./hooks/useClickOutside";
+import useKeyPressed from "./hooks/useKeyPressed";
 
 export {
   Box,
@@ -39,5 +41,7 @@ export {
   Overlay,
   Spacer,
   Icon,
-  theme
+  theme,
+  useClickOutside,
+  useKeyPressed
 };

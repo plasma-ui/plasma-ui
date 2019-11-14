@@ -6,8 +6,8 @@ import styled from "@emotion/styled";
 import { jsx, css, keyframes } from "@emotion/core";
 
 import Flexbox from "../Flexbox";
-import useKeyPressed from "../../hooks/useKeyPressed";
-import useClickOutside from "../../hooks/useClickOutside";
+import useKeyPressed from "../hooks/useKeyPressed";
+import useClickOutside from "../hooks/useClickOutside";
 import Overlay from "../Overlay";
 
 const animations = {
