@@ -7,7 +7,7 @@ cache:
     - node_modules
 before_install:
   - npm i -g yarn@latest
-  - npm install -g npm-cli-login && npm-cli-login
+  - npm login
 install:
   - yarn
 script:
