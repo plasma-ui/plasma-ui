@@ -9,7 +9,7 @@ import { Check, XOctagon, AlertTriangle } from "react-feather";
 import Flexbox from "../Flexbox";
 import Box from "../Box";
 import Text from "../Text";
-import theme from "../../theme";
+import theme from "../theme";
 
 const fade = keyframes`
   from {opacity: 0}, 

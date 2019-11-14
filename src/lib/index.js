@@ -17,6 +17,7 @@ import Loader from "./Loader";
 import Navbar from "./Navbar";
 import Overlay from "./Overlay";
 import Spacer from "./Spacer";
+import theme from "./theme";
 
 export {
   Box,
@@ -37,5 +38,6 @@ export {
   Navbar,
   Overlay,
   Spacer,
-  Icon
+  Icon,
+  theme
 };
