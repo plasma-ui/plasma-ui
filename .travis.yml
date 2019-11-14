@@ -1,0 +1,20 @@
+language: node_js
+node_js:
+  - 10
+cache:
+  yarn: true
+  directories:
+    - node_modules
+before_install:
+  - npm i -g yarn@latest
+install:
+  - yarn
+script:
+  - yarn test
+  - yarn run build
+  deploy:
+  provider: npm
+  api_token: NPM_API_TOKEN
+  edge: true # opt in to dpl v2
+  on:
+    branch: production
