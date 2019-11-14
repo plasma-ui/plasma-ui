@@ -7,13 +7,12 @@ cache:
     - node_modules
 before_install:
   - npm i -g yarn@latest
-  - npm install -g npm-cli-login
+  - npm i -g makeshift && makeshift -s @plasma-ui -r registry.npmjs.org
 install:
   - yarn
 script:
   - yarn test
   - yarn run build
-  - npm-cli-login
 deploy:
   provider: npm
   edge: true # opt in to dpl v2
