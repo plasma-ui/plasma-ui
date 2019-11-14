@@ -7,7 +7,7 @@ cache:
     - node_modules
 before_install:
   - npm i -g yarn@latest
-  - echo "//registry.npmjs.org/:_authToken=\${NPM_API_KEY}" > .npmrc
+  - npm install -g npm-cli-login && npm-cli-login
 install:
   - yarn
 script:
