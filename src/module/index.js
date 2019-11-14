@@ -1,6 +1,11 @@
 import React from "react";
-import Text from "../lib/Text";
+import Box from "../lib/Box";
+import Alert from "../lib/Alert";
 
-const App = () => <Text>Success</Text>;
+const App = () => (
+  <Box>
+    <Alert message="This is an alert" />
+  </Box>
+);
 
 export default App;

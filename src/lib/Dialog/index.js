@@ -1,4 +1,4 @@
-/** @jsx jsx */ jsx;
+/** @jsx jsx */
 import { useState, useEffect, useLayoutEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import { bool, func, string } from "prop-types";

@@ -1,4 +1,4 @@
-/** @jsx jsx */ jsx;
+/** @jsx jsx */
 import { string } from "prop-types";
 import { jsx, css, keyframes } from "@emotion/core";
 
