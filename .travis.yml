@@ -7,7 +7,7 @@ cache:
     - node_modules
 before_install:
   - npm i -g yarn@latest
-  - npm i -g makeshift && makeshift -s @plasma-ui -r registry.npmjs.org
+  - echo "//registry.npmjs.org/:_authToken=\${NPM_API_KEY}" > .npmrc
 install:
   - yarn
 script:
