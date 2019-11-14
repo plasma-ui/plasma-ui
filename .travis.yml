@@ -12,9 +12,12 @@ install:
 script:
   - yarn test
   - yarn run build
-  deploy:
+deploy:
   provider: npm
-  api_token: NPM_API_TOKEN
   edge: true # opt in to dpl v2
+  email: $NPM_EMAIL
+  api_key:
+    secure: $NPM_API_KEY
   on:
+    repo: plasma-ui/plasma-ui
     branch: production
