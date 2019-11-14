@@ -1,6 +1,6 @@
 {
   "name": "@plasma-ui/core",
-  "version": "0.2.18",
+  "version": "0.2.19",
   "description": "Plasma-ui",
   "main": "dist/index.js",
   "module": "dist/index.js",
