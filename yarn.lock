@@ -1224,9 +1224,9 @@
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
 
 "@plasma-ui/core@^0.2.5":
-  version "0.2.17"
-  resolved "https://registry.yarnpkg.com/@plasma-ui/core/-/core-0.2.17.tgz#b39dfd12d47ffa9c35c91e0181d18e255dded708"
-  integrity sha512-fGGkwxn6vQmuyVoXm+5fKUPP7Kc1FoKARDOqi2Tgbgj8eOpepbXsJ8nyUV2H+ESQANU1vowg5HP7RR5Ug1GiFg==
+  version "0.2.25"
+  resolved "https://registry.yarnpkg.com/@plasma-ui/core/-/core-0.2.25.tgz#3bb2ca548ebf97756474241c1dc97233fcd7acfd"
+  integrity sha512-DQF3yX9dm/zY+cDXqgrtWuwk86qQu3UHVWyiqenGkclgNLSeWigmjk0uILJhPBNsocZGVM+hRs1rRNPxmFCXdQ==
   dependencies:
     "@styled-system/prop-types" "^5.1.2"
     "@styled-system/should-forward-prop" "^5.1.2"
