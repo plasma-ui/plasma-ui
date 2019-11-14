@@ -1,19 +1,41 @@
-export * from "react-feather";
-export Box from "./Box";
-export Text from "./Text";
-export Alert from "./Alert";
-export Button from "./Button";
-export Banner from "./Banner";
-export Checkbox from "./Checkbox";
-export Dialog from "./Dialog";
-export Drawer from "./Drawer";
-export Flexbox from "./Flexbox";
-export Heading from "./Heading";
-export Link from "./Link";
-export UnorderedList from "./UnorderedList";
-export OrderedList from "./OrderedList";
-export ListItem from "./ListItem";
-export Loader from "./Loader";
-export Navbar from "./Navbar";
-export Overlay from "./Overlay";
-export Spacer from "./Spacer";
+import * as Icon from "react-feather";
+import Box from "./Box";
+import Text from "./Text";
+import Alert from "./Alert";
+import Button from "./Button";
+import Banner from "./Banner";
+import Checkbox from "./Checkbox";
+import Dialog from "./Dialog";
+import Drawer from "./Drawer";
+import Flexbox from "./Flexbox";
+import Heading from "./Heading";
+import Link from "./Link";
+import UnorderedList from "./UnorderedList";
+import OrderedList from "./OrderedList";
+import ListItem from "./ListItem";
+import Loader from "./Loader";
+import Navbar from "./Navbar";
+import Overlay from "./Overlay";
+import Spacer from "./Spacer";
+
+export {
+  Box,
+  Text,
+  Alert,
+  Button,
+  Banner,
+  Checkbox,
+  Dialog,
+  Drawer,
+  Flexbox,
+  Heading,
+  Link,
+  UnorderedList,
+  OrderedList,
+  ListItem,
+  Loader,
+  Navbar,
+  Overlay,
+  Spacer,
+  Icon
+};
