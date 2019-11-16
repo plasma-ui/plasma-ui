@@ -5,6 +5,7 @@ import {
   props
 } from "@styled-system/should-forward-prop";
 import {
+  flexbox,
   space,
   layout,
   color,
@@ -28,6 +29,9 @@ const Box = styled("div", {
   shouldForwardProp
 })(
   props => ({
+    flexDirection: props.dir,
+    justifyContent: props.justify,
+    alignItems: props.align,
     willChange: props.willChange,
     transform: props.transform,
     cursor: props.cursor
@@ -36,6 +40,7 @@ const Box = styled("div", {
     boxSizing: "border-box"
   },
   compose(
+    flexbox,
     space,
     layout,
     color,
@@ -49,7 +54,7 @@ const Box = styled("div", {
 );
 
 Box.propTypes = {
-  ...propTypes.color,
+  ...propTypes.flexbox,
   ...propTypes.space,
   ...propTypes.layout,
   ...propTypes.color,
