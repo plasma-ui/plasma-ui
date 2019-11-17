@@ -36,8 +36,7 @@ const Flexbox = styled("div", {
     transform: props.transform
   }),
   {
-    boxSizing: "border-box",
-    minWidth: 0
+    boxSizing: "border-box"
   },
   compose(
     flexbox,
