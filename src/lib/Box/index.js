@@ -22,7 +22,10 @@ const shouldForwardProp = createShouldForwardProp([
   ...props,
   "willChange",
   "transform",
-  "cursor"
+  "cursor",
+  "dir",
+  "justify",
+  "align"
 ]);
 
 const Box = styled("div", {
