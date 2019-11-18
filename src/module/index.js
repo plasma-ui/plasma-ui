@@ -1,11 +1,14 @@
 import React from "react";
 import Box from "../lib/Box";
-import Alert from "../lib/Alert";
+import Flexbox from "../lib/Flexbox";
 
 const App = () => (
-  <Box>
-    <Alert message="This is an alert" />
-  </Box>
+  <Flexbox justify="flex-end" align="flex-start">
+    <Box>Box 1</Box>
+    <Box>Box 2</Box>
+    <Box>Box 3</Box>
+    <Box>Box 4</Box>
+  </Flexbox>
 );
 
 export default App;
