@@ -1,4 +1,6 @@
-# [PLASMA UI](https://plasma-ui.com/)
+#[PLASMA UI](https://plasma-ui.com/)
+
+![Plasma UI Logo](https://firebasestorage.googleapis.com/v0/b/plasma-ui.appspot.com/o/small-logo.png?alt=media)
 
 ### Plasma ui is a component library for building reliable, beautiful and fully accessible React apps.
 
