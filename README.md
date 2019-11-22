@@ -6,8 +6,6 @@
 yarn add @plasma-ui/core
 ```
 
-#### yarn add @plasma-ui/core
-
 ## Documentation
 
 See the [official website](https://plasma-ui.com) for full documentation, recipes, and more.
