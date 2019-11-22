@@ -2,8 +2,14 @@
 
 ### Plasma ui is a component library for building reliable, beautiful and fully accessible React apps.
 
-### Install:
+```
+yarn add @plasma-ui/core
+```
 
 #### yarn add @plasma-ui/core
 
-#### Documentaion and website are work in progress and will be available very soon...
+## Documentation
+
+See the [official website](https://plasma-ui.com) for full documentation, recipes, and more.
+
+#### Documentaion and website are in active development...
