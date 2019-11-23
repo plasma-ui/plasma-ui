@@ -5,7 +5,7 @@
 ### Plasma ui is a component library for building reliable, beautiful and fully accessible React apps.
 
 ```
-yarn add @plasma-ui/core
+yarn add @plasma-ui/core @emotion/core @emotion/styled emotion-theming
 ```
 
 ## Documentation
