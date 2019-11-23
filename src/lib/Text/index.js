@@ -7,6 +7,7 @@ import {
   props
 } from "@styled-system/should-forward-prop";
 import {
+  flexbox,
   space,
   layout,
   color,
@@ -47,6 +48,7 @@ const StyledText = styled("p", {
     boxSizing: "border-box"
   },
   compose(
+    flexbox,
     space,
     layout,
     color,
@@ -63,6 +65,7 @@ const Text = ({ truncate, ...rest }) => {
 };
 
 Text.propTypes = {
+  ...propTypes.flexbox,
   ...propTypes.space,
   ...propTypes.layout,
   ...propTypes.color,
