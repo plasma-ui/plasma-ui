@@ -1,6 +1,13 @@
+/** @jsx jsx */
+import { jsx, css } from "@emotion/core";
 import styled from "@emotion/styled";
 import propTypes from "@styled-system/prop-types";
 import {
+  createShouldForwardProp,
+  props
+} from "@styled-system/should-forward-prop";
+import {
+  flexbox,
   space,
   layout,
   color,
@@ -12,11 +19,36 @@ import {
   compose
 } from "styled-system";
 
-const Header = styled("h1")(
+const truncated = css({
+  textOverflow: "ellipsis",
+  whiteSpace: "nowrap",
+  overflow: "hidden"
+});
+
+const shouldForwardProp = createShouldForwardProp([
+  ...props,
+  "willChange",
+  "transform",
+  "cursor",
+  "whiteSpace",
+  "textOverflow"
+]);
+
+const StyledHeader = styled("h1", {
+  shouldForwardProp
+})(
+  props => ({
+    willChange: props.willChange,
+    transform: props.transform,
+    cursor: props.cursor,
+    whiteSpace: props.whiteSpace,
+    textOverflow: props.textOverflow
+  }),
   {
     boxSizing: "border-box"
   },
   compose(
+    flexbox,
     space,
     layout,
     color,
@@ -28,7 +60,16 @@ const Header = styled("h1")(
   )
 );
 
+const Header = ({ truncate, ...rest }) => {
+  return <StyledHeader css={truncate && truncated} {...rest} />;
+};
+
+Header.defaultProps = {
+  m: 0
+};
+
 Header.propTypes = {
+  ...propTypes.flexbox,
   ...propTypes.space,
   ...propTypes.layout,
   ...propTypes.color,
