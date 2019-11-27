@@ -74,6 +74,7 @@ Link.propTypes = {
   willChange: string,
   textDecoration: string,
   transform: string,
+  cursor: string,
   ...propTypes.flexbox,
   ...propTypes.space,
   ...propTypes.layout,

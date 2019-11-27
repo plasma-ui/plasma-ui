@@ -1,5 +1,10 @@
 import styled from "@emotion/styled";
+import { string } from "prop-types";
 import propTypes from "@styled-system/prop-types";
+import {
+  createShouldForwardProp,
+  props
+} from "@styled-system/should-forward-prop";
 import {
   flexbox,
   space,
@@ -14,10 +19,31 @@ import {
   compose
 } from "styled-system";
 
-const Button = styled("button")(
+const shouldForwardProp = createShouldForwardProp([
+  ...props,
+  "willChange",
+  "transform",
+  "cursor",
+  "dir",
+  "justify",
+  "align",
+  "textDecoration"
+]);
+
+const Button = styled("button", {
+  shouldForwardProp
+})(
+  props => ({
+    flexDirection: props.dir,
+    justifyContent: props.justify,
+    alignItems: props.align,
+    willChange: props.willChange,
+    transform: props.transform,
+    cursor: props.cursor
+  }),
   {
-    appearance: "button",
-    cursor: "pointer"
+    boxSizing: "border-box",
+    appearance: "button"
   },
   compose(
     flexbox,
@@ -67,10 +93,25 @@ const Button = styled("button")(
 );
 
 Button.defaultProps = {
-  type: "button"
+  type: "button",
+  cursor: "pointer",
+  dir: "",
+  justify: "",
+  align: "",
+  textDecoration: "",
+  willChange: null,
+  transform: null
 };
 
 Button.propTypes = {
+  type: string,
+  cursor: string,
+  dir: string,
+  justify: string,
+  align: string,
+  willChange: string,
+  textDecoration: string,
+  transform: string,
   ...propTypes.flexbox,
   ...propTypes.space,
   ...propTypes.color,
