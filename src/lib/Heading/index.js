@@ -45,7 +45,8 @@ const StyledHeader = styled("h1", {
     textOverflow: props.textOverflow
   }),
   {
-    boxSizing: "border-box"
+    boxSizing: "border-box",
+    margin: "0"
   },
   compose(
     flexbox,
@@ -62,10 +63,6 @@ const StyledHeader = styled("h1", {
 
 const Header = ({ truncate, ...rest }) => {
   return <StyledHeader css={truncate && truncated} {...rest} />;
-};
-
-Header.defaultProps = {
-  m: 0
 };
 
 Header.propTypes = {

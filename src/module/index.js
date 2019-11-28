@@ -2,6 +2,7 @@ import React from "react";
 import Box from "../lib/Box";
 import Flexbox from "../lib/Flexbox";
 import Text from "../lib/Text";
+import Heading from "../lib/Heading";
 import Link from "../lib/Link";
 import Button from "../lib/Button";
 import Alert from "../lib/Alert";
@@ -66,6 +67,9 @@ const App = () => (
       <Box bg="#E365C1" size="70px" />
       <Box bg="purple" size="70px" />
       <Box bg="silver" size="70px" />
+      <Heading mx="0" my="0">
+        Heading
+      </Heading>
 
       <Alert message="Alert" status="success" />
       <Alert message="Alert" status="error" />
