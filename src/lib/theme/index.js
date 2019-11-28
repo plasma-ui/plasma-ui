@@ -5,53 +5,31 @@ const colors = {
   gray: "#50514F",
   grey: "#50514F",
   red: "#EB0D1B",
-  yellow: [
-    "#FFE973",
-    "#FFE55C",
-    "#FFE145",
-    "#FFDE2E",
-    "#FFDA17",
-    "#FFD700",
-    "#E8C400",
-    "#D1B000",
-    "#BA9D00"
-  ],
-  green: [
-    "#61C36F",
-    "#4FBC5F",
-    "#3EB650",
-    "#39A649",
-    "#339542",
-    "#2E853B",
-    "#287433",
-    "#22642C",
-    "#1D5325"
-  ],
-  blue: [
-    "#359BFB",
-    "#49A5FB",
-    "#2191FB",
-    "#1E84E5",
-    "#1C77CE",
-    "#196AB7",
-    "#155DA0",
-    "#125089",
-    "#0F4273"
-  ]
+  yellow: "#FFDA17",
+  green: "#39A649",
+  blue: "#1C77CE",
+  navy: "#001f3f",
+  aqua: "#7FDBFF",
+  teal: "#39CCCC",
+  olive: "#3D9970",
+  maroon: "#85144b",
+  fuchsia: "#F012BE",
+  purple: "#b10dc9",
+  silver: "#DDDDDD"
 };
 
 const alerts = {
   success: {
-    color: "#FFFFFF",
-    backgroundColor: "#70C1B3"
+    color: "white",
+    backgroundColor: "green"
   },
   error: {
-    color: "#FFFFFF",
-    backgroundColor: "#F25F5C"
+    color: "white",
+    backgroundColor: "red"
   },
   warning: {
-    color: "#000000",
-    backgroundColor: "#FFE066"
+    color: "navy",
+    backgroundColor: "yellow"
   },
   custom: ""
 };
