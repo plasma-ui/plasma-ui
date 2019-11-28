@@ -44,11 +44,15 @@
     "react": "16.x",
     "react-dom": "^16.x"
   },
-  "repository": "",
+  "repository": "https://github.com/plasma-ui/plasma-ui",
   "keywords": [
     "react",
     "ui component",
-    "react-component"
+    "react-component",
+    "plasma",
+    "plasma ui",
+    "plasma-ui",
+    "react plasma ui"
   ],
   "scripts": {
     "start": "react-scripts start",
