@@ -19,8 +19,9 @@ const App = () => (
         This is a link
       </Link>
       <Button
-        backgroundColor="blue"
-        variant=""
+        type="submit"
+        backgroundColor="tranparent"
+        variant="default"
         fontSize="1.2rem"
         p="10px"
         borderRadius="4px"
@@ -30,8 +31,7 @@ const App = () => (
       </Button>
 
       <Button
-        backgroundColor="blue"
-        variant=""
+        variant="green"
         fontSize="1.2rem"
         p="10px"
         borderRadius="4px"
@@ -41,11 +41,20 @@ const App = () => (
       </Button>
 
       <Button
-        backgroundColor="blue"
-        variant=""
+        variant="red"
         fontSize="1.2rem"
         p="10px"
         borderRadius="4px"
+        onClick={() => console.log("Clicked")}
+      >
+        Button
+      </Button>
+
+      <Button
+        variant="yellow"
+        fontSize="1.2rem"
+        p="10px"
+        borderRadius="3px"
         onClick={() => console.log("Clicked")}
       >
         Button
