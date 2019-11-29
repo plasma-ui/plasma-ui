@@ -45,6 +45,7 @@
     "react-dom": "^16.x"
   },
   "repository": "https://github.com/plasma-ui/plasma-ui",
+  "homepage": "plasma-ui.com",
   "keywords": [
     "react",
     "ui component",
