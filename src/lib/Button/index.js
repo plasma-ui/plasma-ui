@@ -58,8 +58,8 @@ const Button = styled("button", {
     variant({
       variants: {
         default: {
-          color: "#FFFFFF",
-          bg: "#3e64ff",
+          color: "white",
+          bg: "blue",
           border: 0
         },
         dashed: {
@@ -67,24 +67,17 @@ const Button = styled("button", {
           textShadow: "1px 1px 1px #d4d7d6"
         },
         green: {
-          bg: "#5ABC3C",
-          color: "#FFFFFF",
+          bg: "green",
+          color: "white",
           border: 0
         },
         red: {
-          bg: "#FF3535",
-          color: "#FFFFFF",
+          bg: "red",
+          color: "white",
           border: 0
         },
         yellow: {
-          bg: "#FFE842",
-          border: 0
-        },
-        plasma: {
-          color: "#fff",
-          // textShadow: "1px 1px 2px #18D3AF",
-          background:
-            "radial-gradient(#fff400, #e71919, #753A88, #8d5ac3, #100572, #000)",
+          bg: "yellow",
           border: 0
         }
       }
