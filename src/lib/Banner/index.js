@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { string } from "prop-types";
 import propTypes from "@styled-system/prop-types";
 import {
   createShouldForwardProp,
@@ -33,8 +34,7 @@ const Banner = styled("header", {
     alignItems: props.align
   }),
   {
-    boxSizing: "border-box",
-    minWidth: 0
+    boxSizing: "border-box"
   },
   compose(
     flexbox,
@@ -54,6 +54,9 @@ Banner.defaultProps = {
 };
 
 Banner.propTypes = {
+  dir: string,
+  justify: string,
+  align: string,
   ...propTypes.flexbox,
   ...propTypes.space,
   ...propTypes.layout,
