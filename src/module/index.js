@@ -6,11 +6,17 @@ import Heading from "../lib/Heading";
 import Link from "../lib/Link";
 import Button from "../lib/Button";
 import Alert from "../lib/Alert";
+import Banner from "../lib/Banner";
 import { ThemeProvider } from "emotion-theming";
 import theme from "../lib/theme";
 
 const App = () => (
   <ThemeProvider theme={theme}>
+    <Banner dir="column" align="center">
+      <Alert message="Alert" status="success" />
+      <Alert message="Alert" status="error" />
+      <Alert message="Alert" status="warning" />
+    </Banner>
     <Flexbox justify="center" align="center" flexWrap="wrap">
       <Text truncate width="200px">
         This is a long text that should be truncated.
@@ -20,7 +26,6 @@ const App = () => (
       </Link>
       <Button
         type="submit"
-        backgroundColor="tranparent"
         variant="default"
         fontSize="1.2rem"
         p="10px"
@@ -79,10 +84,6 @@ const App = () => (
       <Heading mx="0" my="0">
         Heading
       </Heading>
-
-      <Alert message="Alert" status="success" />
-      <Alert message="Alert" status="error" />
-      <Alert message="Alert" status="warning" />
     </Flexbox>
   </ThemeProvider>
 );
