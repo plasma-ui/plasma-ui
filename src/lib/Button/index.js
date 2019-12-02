@@ -58,13 +58,16 @@ const Button = styled("button", {
     variant({
       variants: {
         default: {
-          color: "white",
-          bg: "blue",
-          border: 0
+          bg: "transparent"
         },
         dashed: {
           borderStyle: "dashed",
           textShadow: "1px 1px 1px #d4d7d6"
+        },
+        blue: {
+          color: "white",
+          bg: "blue",
+          border: 0
         },
         green: {
           bg: "green",

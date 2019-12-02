@@ -32,7 +32,11 @@ const App = () => {
       >
         Open dialog
       </Button>
-      <Dialog isOpen={isOpen} onDismiss={() => setisOpen(false)}>
+      <Dialog
+        isOpen={isOpen}
+        onDismiss={() => setisOpen(false)}
+        animation="slide-down"
+      >
         This is a dialog
       </Dialog>
       <Flexbox justify="center" align="center" flexWrap="wrap">
