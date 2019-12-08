@@ -24,7 +24,8 @@ const shouldForwardProp = createShouldForwardProp([
   "justify",
   "align",
   "transform",
-  "cursor"
+  "cursor",
+  "willChange"
 ]);
 
 const ListItem = styled("li", {
@@ -35,7 +36,8 @@ const ListItem = styled("li", {
     justifyContent: props.justify,
     alignItems: props.align,
     transform: props.transform,
-    cursor: props.cursor
+    cursor: props.cursor,
+    willChange: props.willChange
   }),
   {
     boxSizing: "border-box"

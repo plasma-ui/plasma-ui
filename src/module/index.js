@@ -7,7 +7,9 @@ import Link from "../lib/Link";
 import Button from "../lib/Button";
 import Alert from "../lib/Alert";
 import Dialog from "../lib/Dialog";
+import Spacer from "../lib/Spacer";
 import Banner from "../lib/Banner";
+import Navbar from "../lib/Navbar";
 import { ThemeProvider } from "emotion-theming";
 import theme from "../lib/theme";
 
@@ -18,10 +20,12 @@ const App = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <Banner dir="column" align="center">
-        <Alert message="Alert" status="success" />
-        <Alert message="Alert" status="error" />
-        <Alert message="Alert" status="warning" />
+      <Banner justify="space-between" align="center">
+        <Heading>Logo</Heading>
+        <Navbar>
+          <Link>Item 1</Link>
+          <Link>Item 2</Link>
+        </Navbar>
       </Banner>
       <Button
         variant="default"
