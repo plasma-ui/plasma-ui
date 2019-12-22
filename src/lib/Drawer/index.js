@@ -1,65 +1,58 @@
-import React from "react";
-import styled from "@emotion/styled";
-import propTypes from "@styled-system/prop-types";
-import {
-  flexbox,
-  space,
-  layout,
-  color,
-  typography,
-  background,
-  border,
-  position,
-  shadow,
-  compose
-} from "styled-system";
+/** @jsx jsx */
+import { useState, useEffect, useRef } from "react";
+import { string } from "prop-types";
+import { jsx, css } from "@emotion/core";
 
 import Navbar from "../Navbar";
+import useClickOutside from "../hooks/useClickOutside";
 
-const ReactDrawer = ({ children, ...props }) => {
-  return <Navbar {...props}>{children}</Navbar>;
+const Drawer = ({ children, isOpen, onDismiss, placement, ...props }) => {
+  const [toggle, setToggle] = useState(null);
+  const drawerRef = useRef();
+
+  const handleDismiss = () => {
+    onDismiss();
+    setToggle(false);
+  };
+
+  useClickOutside(drawerRef, () => handleDismiss());
+
+  useEffect(() => {
+    if (isOpen) setToggle(true);
+  }, [isOpen]);
+
+  if (isOpen && toggle) {
+    return (
+      <Navbar
+        ref={drawerRef}
+        css={css`
+          left: ${placement === "left" || !placement ? 0 : null};
+          right: ${placement === "right" ? 0 : null};
+        `}
+        {...props}
+      >
+        {children}
+      </Navbar>
+    );
+  }
+
+  return null;
 };
 
-const Drawer = styled(ReactDrawer)(
-  {
-    boxSizing: "border-box"
-  },
-  compose(
-    flexbox,
-    space,
-    layout,
-    color,
-    typography,
-    background,
-    border,
-    position,
-    shadow
-  )
-);
-
 Drawer.defaultProps = {
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "flex-start",
-  alignItems: "baseline",
-  flexWrap: "nowrap",
+  dir: "column",
   position: "fixed",
-  right: 0,
+  placement: "left",
+  top: 0,
+  backgroundColor: "white",
+  boxShadow:
+    "rgba(14, 18, 22, 0.35) 0px 10px 38px -10px, rgba(14, 18, 22, 0.2) 0px 10px 20px -15px;",
   height: "100vh",
-  width: "25%",
-  px: "20px"
+  width: [1, 1 / 2, 1 / 3, 1 / 4, 1 / 5]
 };
 
 Drawer.propTypes = {
-  ...propTypes.flexbox,
-  ...propTypes.space,
-  ...propTypes.layout,
-  ...propTypes.color,
-  ...propTypes.typography,
-  ...propTypes.background,
-  ...propTypes.border,
-  ...propTypes.position,
-  ...propTypes.shadow
+  placement: string
 };
 
 export default Drawer;

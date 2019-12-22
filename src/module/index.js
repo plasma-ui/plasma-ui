@@ -7,7 +7,10 @@ import Link from "../lib/Link";
 import Button from "../lib/Button";
 import Alert from "../lib/Alert";
 import Dialog from "../lib/Dialog";
+import Spacer from "../lib/Spacer";
 import Banner from "../lib/Banner";
+import Navbar from "../lib/Navbar";
+import Drawer from "../lib/Drawer";
 import { ThemeProvider } from "emotion-theming";
 import theme from "../lib/theme";
 
@@ -18,10 +21,12 @@ const App = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <Banner dir="column" align="center">
-        <Alert message="Alert" status="success" />
-        <Alert message="Alert" status="error" />
-        <Alert message="Alert" status="warning" />
+      <Banner justify="space-between" align="center">
+        <Heading>Logo</Heading>
+        <Navbar>
+          <Link>Item 1</Link>
+          <Link>Item 2</Link>
+        </Navbar>
       </Banner>
       <Button
         variant="default"
@@ -30,15 +35,25 @@ const App = () => {
         borderRadius="4px"
         onClick={toggleDialog}
       >
-        Open dialog
+        Open Drawer
       </Button>
-      <Dialog
+      <Drawer
+        isOpen={isOpen}
+        onDismiss={() => setisOpen(false)}
+        placement="right"
+      >
+        <Button onClick={() => setisOpen(false)}>Close</Button>
+        <Text>some text</Text>
+        <Button>Another button</Button>
+        <Button>Another button</Button>
+      </Drawer>
+      {/* <Dialog
         isOpen={isOpen}
         onDismiss={() => setisOpen(false)}
         animation="slide-down"
       >
         This is a dialog
-      </Dialog>
+      </Dialog> */}
       <Flexbox justify="center" align="center" flexWrap="wrap">
         <Text truncate width="200px">
           This is a long text that should be truncated.
