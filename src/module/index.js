@@ -10,6 +10,7 @@ import Dialog from "../lib/Dialog";
 import Spacer from "../lib/Spacer";
 import Banner from "../lib/Banner";
 import Navbar from "../lib/Navbar";
+import Drawer from "../lib/Drawer";
 import { ThemeProvider } from "emotion-theming";
 import theme from "../lib/theme";
 
@@ -34,15 +35,25 @@ const App = () => {
         borderRadius="4px"
         onClick={toggleDialog}
       >
-        Open dialog
+        Open Drawer
       </Button>
-      <Dialog
+      <Drawer
+        isOpen={isOpen}
+        onDismiss={() => setisOpen(false)}
+        placement="right"
+      >
+        <Button onClick={() => setisOpen(false)}>Close</Button>
+        <Text>some text</Text>
+        <Button>Another button</Button>
+        <Button>Another button</Button>
+      </Drawer>
+      {/* <Dialog
         isOpen={isOpen}
         onDismiss={() => setisOpen(false)}
         animation="slide-down"
       >
         This is a dialog
-      </Dialog>
+      </Dialog> */}
       <Flexbox justify="center" align="center" flexWrap="wrap">
         <Text truncate width="200px">
           This is a long text that should be truncated.
