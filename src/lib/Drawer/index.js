@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useLayoutEffect } from "react";
 import { string } from "prop-types";
 import { jsx, css } from "@emotion/core";
 
@@ -16,6 +16,16 @@ const Drawer = ({ children, isOpen, onDismiss, placement, ...props }) => {
   };
 
   useClickOutside(drawerRef, () => handleDismiss());
+
+  useLayoutEffect(() => {
+    const originalOverflow = window.getComputedStyle(document.body).overflow;
+
+    // Prevent scrolling on mount
+    if (isOpen) document.body.style.overflow = "hidden";
+
+    // Enable scrolling again when component unmounts
+    return () => (document.body.style.overflow = originalOverflow);
+  }, [isOpen]);
 
   useEffect(() => {
     if (isOpen) setToggle(true);
