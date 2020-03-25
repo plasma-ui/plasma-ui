@@ -13,6 +13,7 @@ import Navbar from "../lib/Navbar";
 import Drawer from "../lib/Drawer";
 import { ThemeProvider } from "emotion-theming";
 import theme from "../lib/theme";
+import Input from "../lib/Input";
 
 const App = () => {
   const [isOpen, setisOpen] = useState(false);
@@ -111,6 +112,12 @@ const App = () => {
         <Heading mx="0" my="0">
           Heading
         </Heading>
+      </Flexbox>
+      <Flexbox>
+        <Input placeholder="Search" borderRadius="20px" />
+        <Input placeholder="Search" variant="nude" />
+        <Input placeholder="Search" variant="floored" />
+        <Input placeholder="Search" />
       </Flexbox>
     </ThemeProvider>
   );
