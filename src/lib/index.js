@@ -1,4 +1,5 @@
 import * as Icon from "react-feather";
+import Input from "./Input";
 import Box from "./Box";
 import Text from "./Text";
 import Alert from "./Alert";
@@ -22,6 +23,7 @@ import useClickOutside from "./hooks/useClickOutside";
 import useKeyPressed from "./hooks/useKeyPressed";
 
 export {
+  Input,
   Box,
   Text,
   Alert,

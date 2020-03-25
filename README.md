@@ -1,6 +1,6 @@
 [PLASMA UI](https://plasma-ui.com/)
 
-![Plasma UI Logo](https://firebasestorage.googleapis.com/v0/b/plasma-ui.appspot.com/o/small-logo.png?alt=media) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)]() [![Build Status](https://travis-ci.org/plasma-ui/plasma-ui.svg?branch=production)]()
+![Plasma UI Logo](https://firebasestorage.googleapis.com/v0/b/plasma-ui.appspot.com/o/small-logo.png?alt=media) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)]() [![](https://img.shields.io/npm/dt/@plasma-ui/core?style=for-the-badge)]() [![Build Status](https://travis-ci.org/plasma-ui/plasma-ui.svg?branch=production)]()
 
 ### Plasma ui is a component library for building reliable, beautiful and fully accessible React apps.
 
