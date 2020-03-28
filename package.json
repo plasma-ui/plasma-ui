@@ -1,6 +1,6 @@
 {
   "name": "@plasma-ui/core",
-  "version": "1.2.0",
+  "version": "1.2.2",
   "description": "Plasma-ui",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -16,26 +16,26 @@
     ]
   },
   "dependencies": {
-    "@styled-system/prop-types": "^5.1.2",
-    "@styled-system/should-forward-prop": "^5.1.2",
+    "@styled-system/prop-types": "^5.1.5",
+    "@styled-system/should-forward-prop": "^5.1.5",
     "prop-types": "^15.7.2",
     "react-feather": "^2.0.3",
-    "styled-system": "^5.1.2"
+    "styled-system": "^5.1.5"
   },
   "devDependencies": {
     "@emotion/core": "10.x",
     "@emotion/styled": "10.x",
-    "@plasma-ui/core": "^0.2.5",
+    "@plasma-ui/core": "^1.2.0",
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "emotion-theming": "10.x",
-    "prettier": "1.18.2",
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0",
-    "react-scripts": "^3.2.0",
-    "react-test-renderer": "^16.11.0"
+    "prettier": "^2.0.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "^3.4.1",
+    "react-test-renderer": "^16.13.1"
   },
   "peerDependencies": {
     "@emotion/core": "10.x",
@@ -53,7 +53,8 @@
     "plasma",
     "plasma ui",
     "plasma-ui",
-    "react plasma ui"
+    "react plasma ui",
+    "design system"
   ],
   "scripts": {
     "start": "react-scripts start",

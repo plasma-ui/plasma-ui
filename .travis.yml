@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - 10
+  - 12
 cache:
   yarn: true
   directories:
@@ -9,7 +9,7 @@ before_install:
   - npm i -g yarn@latest
   - npm i -g makeshift && makeshift -s @plasma-ui -r registry.npmjs.org
 install:
-  - yarn
+  - yarn --frozen-lockfile
 script:
   - yarn test
   - yarn run build
