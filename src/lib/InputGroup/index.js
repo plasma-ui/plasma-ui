@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "@emotion/styled";
 import { string } from "prop-types";
 import propTypes from "@styled-system/prop-types";
@@ -19,28 +20,23 @@ import {
   compose
 } from "styled-system";
 
-import Box from "../Box";
+import Flexbox from "../Flexbox";
 
 const shouldForwardProp = createShouldForwardProp([
   ...props,
-  "willChange",
-  "transform",
   "cursor",
   "dir",
   "justify",
-  "align",
-  "textDecoration"
+  "align"
 ]);
 
-const InputDecorator = styled(Box, {
+const InputGroup2 = styled(Flexbox, {
   shouldForwardProp
 })(
   props => ({
     flexDirection: props.dir,
     justifyContent: props.justify,
     alignItems: props.align,
-    willChange: props.willChange,
-    transform: props.transform,
     cursor: props.cursor
   }),
   {
@@ -60,56 +56,52 @@ const InputDecorator = styled(Box, {
       variants: {
         default: {
           bg: "transparent"
-        },
-        dashed: {
-          borderStyle: "dashed",
-          textShadow: "1px 1px 1px #d4d7d6"
-        },
-        blue: {
-          color: "white",
-          bg: "blue",
-          border: 0
-        },
-        green: {
-          bg: "green",
-          color: "white",
-          border: 0
-        },
-        red: {
-          bg: "red",
-          color: "white",
-          border: 0
-        },
-        yellow: {
-          bg: "yellow",
-          border: 0
         }
       }
     })
   )
 );
 
-InputDecorator.defaultProps = {
-  dir: "",
-  justify: "",
-  align: "",
-  textDecoration: "",
-  willChange: null,
-  transform: null,
+const StyledFlexbox = styled(Flexbox)`
+  box-sizing: border-box;
+  input {
+    border: 0;
+  }
+`;
+
+const InputGroup = ({
+  children,
+  border,
+  borderWidth,
+  borderStyle,
+  borderColor,
+  ...rest
+}) => (
+  <StyledFlexbox
+    border={border}
+    borderWidth={borderWidth}
+    borderStyle={borderStyle}
+    borderColor={borderColor}
+    {...rest}
+  >
+    {children}
+  </StyledFlexbox>
+);
+
+InputGroup.defaultProps = {
   padding: "0 7px",
-  flex: "1",
-  fontSize: "1rem",
-  fontWeight: "300"
+  display: "flex",
+  align: "center",
+  border: "1px solid blue",
+  borderRadius: "3px",
+  outline: "none"
 };
 
-InputDecorator.propTypes = {
+InputGroup.propTypes = {
   cursor: string,
   dir: string,
   justify: string,
   align: string,
-  willChange: string,
-  textDecoration: string,
-  transform: string,
   ...propTypes.flexbox,
   ...propTypes.space,
   ...propTypes.color,
@@ -122,4 +114,4 @@ InputDecorator.propTypes = {
   ...propTypes.variant
 };
 
-export default InputDecorator;
+export default InputGroup;

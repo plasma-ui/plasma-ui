@@ -14,6 +14,10 @@ import Drawer from "../lib/Drawer";
 import { ThemeProvider } from "emotion-theming";
 import theme from "../lib/theme";
 import Input from "../lib/Input";
+import InputDecorator from "../lib/InputDecorator";
+import InputGroup from "../lib/InputGroup";
+// import Icon from "../lib/Icon";
+import { Icon } from "@plasma-ui/core";
 
 const App = () => {
   const [isOpen, setisOpen] = useState(false);
@@ -117,7 +121,13 @@ const App = () => {
         <Input placeholder="Search" borderRadius="20px" />
         <Input placeholder="Search" variant="nude" />
         <Input placeholder="Search" variant="floored" />
-        <Input placeholder="Search" />
+        <InputGroup border="1px solid red">
+          <Input placeholder="Search" />
+          <InputDecorator>
+            <Icon.Search color="silver" />
+          </InputDecorator>
+        </InputGroup>
+        <Input placeholder="Search 2" />
       </Flexbox>
     </ThemeProvider>
   );

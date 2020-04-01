@@ -1,5 +1,7 @@
 import * as Icon from "react-feather";
 import Input from "./Input";
+import InputDecorator from "./InputDecorator";
+import InputGroup from "./InputGroup";
 import Box from "./Box";
 import Text from "./Text";
 import Alert from "./Alert";
@@ -24,6 +26,8 @@ import useKeyPressed from "./hooks/useKeyPressed";
 
 export {
   Input,
+  InputDecorator,
+  InputGroup,
   Box,
   Text,
   Alert,

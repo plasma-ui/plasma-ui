@@ -26,8 +26,7 @@ const shouldForwardProp = createShouldForwardProp([
   "cursor",
   "dir",
   "justify",
-  "align",
-  "textDecoration"
+  "align"
 ]);
 
 const Input = styled("input", {
@@ -95,7 +94,6 @@ Input.propTypes = {
   justify: string,
   align: string,
   willChange: string,
-  textDecoration: string,
   transform: string,
   ...propTypes.flexbox,
   ...propTypes.space,
