@@ -19,6 +19,8 @@ import {
   compose
 } from "styled-system";
 
+import Box from "../Box";
+
 const shouldForwardProp = createShouldForwardProp([
   ...props,
   "willChange",
@@ -30,7 +32,7 @@ const shouldForwardProp = createShouldForwardProp([
   "textDecoration"
 ]);
 
-const InputDecorator = styled("input", {
+const InputDecorator = styled(Box, {
   shouldForwardProp
 })(
   props => ({
@@ -88,25 +90,19 @@ const InputDecorator = styled("input", {
 );
 
 InputDecorator.defaultProps = {
-  type: "text",
   dir: "",
   justify: "",
   align: "",
   textDecoration: "",
   willChange: null,
   transform: null,
-  borderWidth: "1px",
-  borderStyle: "solid",
-  borderColor: "silver",
-  borderRadius: "3px",
-  padding: "10px 12px",
+  padding: "0 7px",
   flex: "1",
   fontSize: "1rem",
   fontWeight: "300"
 };
 
 InputDecorator.propTypes = {
-  type: string,
   cursor: string,
   dir: string,
   justify: string,

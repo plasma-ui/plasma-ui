@@ -1,6 +1,6 @@
 {
   "name": "@plasma-ui/core",
-  "version": "1.2.2",
+  "version": "1.3.1",
   "description": "Plasma-ui",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -25,7 +25,7 @@
   "devDependencies": {
     "@emotion/core": "10.x",
     "@emotion/styled": "10.x",
-    "@plasma-ui/core": "^1.2.0",
+    "@plasma-ui/core": "^1.3.0",
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
