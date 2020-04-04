@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import Box from "../lib/Box";
+// import Box from "../lib/Box";
 import Flexbox from "../lib/Flexbox";
 import Text from "../lib/Text";
 import Heading from "../lib/Heading";
 import Link from "../lib/Link";
-import Button from "../lib/Button";
+// import Button from "../lib/Button";
 import Alert from "../lib/Alert";
 import Dialog from "../lib/Dialog";
 import Spacer from "../lib/Spacer";
@@ -13,11 +13,11 @@ import Navbar from "../lib/Navbar";
 import Drawer from "../lib/Drawer";
 import { ThemeProvider } from "emotion-theming";
 import theme from "../lib/theme";
-import Input from "../lib/Input";
+// import Input from "../lib/Input";
 import InputDecorator from "../lib/InputDecorator";
 import InputGroup from "../lib/InputGroup";
 // import Icon from "../lib/Icon";
-import { Icon } from "@plasma-ui/core";
+import { Icon, Box, Input, Button } from "@plasma-ui/core";
 
 const App = () => {
   const [isOpen, setisOpen] = useState(false);
@@ -118,7 +118,7 @@ const App = () => {
         </Heading>
       </Flexbox>
       <Flexbox>
-        <Input placeholder="Search" borderRadius="20px" />
+        <Input />
         <Input placeholder="Search" variant="nude" />
         <Input placeholder="Search" variant="floored" />
         <InputGroup border="1px solid red">

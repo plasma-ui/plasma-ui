@@ -2,65 +2,8 @@ import React from "react";
 import styled from "@emotion/styled";
 import { string } from "prop-types";
 import propTypes from "@styled-system/prop-types";
-import {
-  createShouldForwardProp,
-  props
-} from "@styled-system/should-forward-prop";
-import {
-  flexbox,
-  space,
-  color,
-  background,
-  layout,
-  shadow,
-  border,
-  typography,
-  position,
-  variant,
-  compose
-} from "styled-system";
 
 import Flexbox from "../Flexbox";
-
-const shouldForwardProp = createShouldForwardProp([
-  ...props,
-  "cursor",
-  "dir",
-  "justify",
-  "align"
-]);
-
-const InputGroup2 = styled(Flexbox, {
-  shouldForwardProp
-})(
-  props => ({
-    flexDirection: props.dir,
-    justifyContent: props.justify,
-    alignItems: props.align,
-    cursor: props.cursor
-  }),
-  {
-    boxSizing: "border-box"
-  },
-  compose(
-    flexbox,
-    space,
-    color,
-    background,
-    layout,
-    shadow,
-    border,
-    typography,
-    position,
-    variant({
-      variants: {
-        default: {
-          bg: "transparent"
-        }
-      }
-    })
-  )
-);
 
 const StyledFlexbox = styled(Flexbox)`
   box-sizing: border-box;
