@@ -13,8 +13,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@production
         with:
-          node-version: 12.0.0
-          registry-url: https://registry.npmjs.org
+          node-version: 12.x.x
       - name: Install yarn
         run: npm install -g yarn@latest
       - name: Publish if version has been updated
