@@ -13,11 +13,11 @@ import Navbar from "../lib/Navbar";
 import Drawer from "../lib/Drawer";
 import { ThemeProvider } from "emotion-theming";
 import theme from "../lib/theme";
-// import Input from "../lib/Input";
+import Input from "../lib/Input";
 import InputDecorator from "../lib/InputDecorator";
 import InputGroup from "../lib/InputGroup";
 // import Icon from "../lib/Icon";
-import { Icon, Box, Input, Button } from "@plasma-ui/core";
+import { Icon, Box, Button } from "@plasma-ui/core";
 
 const App = () => {
   const [isOpen, setisOpen] = useState(false);

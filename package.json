@@ -19,7 +19,7 @@
     "@styled-system/prop-types": "^5.1.5",
     "@styled-system/should-forward-prop": "^5.1.5",
     "prop-types": "^15.7.2",
-    "react-feather": "^2.0.3",
+    "react-feather": "^2.0.8",
     "styled-system": "^5.1.5"
   },
   "devDependencies": {
