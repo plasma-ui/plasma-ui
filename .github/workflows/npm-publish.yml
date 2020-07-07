@@ -15,10 +15,8 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org
-      - name: install packages
-        run: yarn --fronzen-lockfile
-      - name: Build
-        run: yarn run build
+      - name: install yarn
+        run: npm install -g yarn@latest
       - name: Publish if version has been updated
         uses: pascalgn/npm-publish-action@4f4bf159e299f65d21cd1cbd96fc5d53228036df
         with:
