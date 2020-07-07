@@ -9,9 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@production
+        uses: actions/checkout@master
       - name: Set up Node.js
-        uses: actions/setup-node@production
+        uses: actions/setup-node@master
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org
